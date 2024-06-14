@@ -53,7 +53,7 @@ pipeline{
           echo 'commiting update version to git repository'
           withCredentials([usernamePassword(credentialsId:'github-credentials',usernameVariable:'USER',passwordVariable:'PASS')]){
 
-            sh 'git config --global user.email"jenkins@example.com" '
+            sh 'git config --global user.email "jenkins@example.com" '
             sh 'git config --global user.name "jenkins"'
 
             sh "git remote set-url origin https://${USER}:${PASS}@https://github.com/bondgh0954/Jenkins-project5.git"
